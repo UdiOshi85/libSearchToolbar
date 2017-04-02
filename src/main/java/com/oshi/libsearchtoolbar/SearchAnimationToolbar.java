@@ -1,4 +1,4 @@
-package com.github.udioshi85.libsearchtoolbar;
+package com.oshi.libsearchtoolbar;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
@@ -149,7 +149,7 @@ public class SearchAnimationToolbar extends FrameLayout implements TextWatcher {
         else
             anim = ViewAnimationUtils.createCircularReveal(searchToolbar, cx, cy, (float) width, 0);
 
-        anim.setDuration((long) 220);
+        anim.setDuration(250L);
 
         // make the view invisible when the animation is done
         anim.addListener(new AnimatorListenerAdapter() {
@@ -228,6 +228,5 @@ public class SearchAnimationToolbar extends FrameLayout implements TextWatcher {
         if (!currentQuery.equalsIgnoreCase(s.toString())) {
             notifySearchQueryChanged(s.toString());
         }
-
     }
 }
