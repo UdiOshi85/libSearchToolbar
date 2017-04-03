@@ -27,7 +27,26 @@ In your XML file put the following:
 	android:layout_height="wrap_content" />
 ````
 
-In you Activity/Fragment, You'll need to provide some menu xml as usual
+Your Activity/Fragment onCreate/onViewCreated:
+
+````
+@Override
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        SearchAnimationToolbar searchAnimationToolbar = (SearchAnimationToolbar) findViewById(R.id.customSearchToolbar);
+        searchAnimationToolbar.setSupportActionBar(MainCallappActivity.this);
+        searchAnimationToolbar.setTitle("Search animation!");
+        searchAnimationToolbar.setOnSearchQueryChangedListener(MainCallappActivity.this);
+        searchAnimationToolbar.setSearchHint("Search for...");
+        searchAnimationToolbar.setTitleTextColor(Color.WHITE);
+
+    }
+````
+
+
+Override the lifecycle menu handling
 ````
 @Override
     public boolean onCreateOptionsMenu(Menu menu) {
