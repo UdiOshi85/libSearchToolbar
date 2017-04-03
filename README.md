@@ -27,6 +27,31 @@ In your XML file put the following:
 	android:layout_height="wrap_content" />
 ````
 
+In you Activity/Fragment, You'll need to provide some menu xml as usual
+````
+@Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+    	// Provide your own menu xml, no library interaction here
+	// This xml should have an menu item with magnifying glass icon
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+````
+Once the user clicked on the magnifying glass, let's handle it in the following way:
+````
+@Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        int itemId = item.getItemId();
+        if (itemId == R.id.your_magnifying_icon_menu_item_id) {
+	    // Tell the library that the icon was clicked, we will handle everything else
+            return searchAnimationToolbar.onSearchIconClick();
+        }
+        return super.onOptionsItemSelected(item);
+    }
+````
+
+
 In your JAVA file:
 ````
 searchAnimationToolbar = (SearchAnimationToolbar) findViewById(R.id.customSearchToolbar);
@@ -41,4 +66,6 @@ Alternativly, You can take the Toolbar:
 ````javascript
 customSearchAnimationToolbar.getToolbar()
 ````
-And do what ever you like :)
+
+Developer notes
+--------------------
