@@ -1,5 +1,8 @@
-# Toolbar search animation example
-### A simple android library providing circular animation when clicking on search icon!
+Search toolbar with animation
+===================
+Create a simple toolbar with circurlar reveal animation when searching!
+
+
 
 ![](https://github.com/UdiOshi85/GlobalFiles/blob/master/libSearchAnimationToolbar%20-1.0.gif)
 
