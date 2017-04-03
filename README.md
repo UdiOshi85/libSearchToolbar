@@ -70,21 +70,10 @@ Once the user clicked on the magnifying glass, let's handle it in the following 
     }
 ````
 
-
-In your JAVA file:
-````
-searchAnimationToolbar = (SearchAnimationToolbar) findViewById(R.id.customSearchToolbar);
-searchAnimationToolbar.setSupportActionBar(MainCallappActivity.this);
-searchAnimationToolbar.setTitle("Search animation!");
-searchAnimationToolbar.setOnSearchQueryChangedListener(MainCallappActivity.this);
-searchAnimationToolbar.setSearchHint("Search for...");
-searchAnimationToolbar.setTitleTextColor(Color.WHITE);
-````
-
-Alternativly, You can take the Toolbar:
-````javascript
-customSearchAnimationToolbar.getToolbar()
-````
+> Alternativly, You can take the Toolbar:
+> ````javascript
+> customSearchAnimationToolbar.getToolbar()
+> ````
 
 Developer notes
 --------------------
