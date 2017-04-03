@@ -22,19 +22,19 @@ Create a simple toolbar with circurlar reveal animation when searching!
 In your XML file put the following:
 ````
 <com.oshi.libsearchtoolbar.SearchAnimationToolbar
-		android:id="@+id/customSearchToolbar"
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content" />
+	android:id="@+id/customSearchToolbar"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content" />
 ````
 
 In your JAVA file:
-````javascript
-SearchAnimationToolbar customSearchAnimationToolbar = (SearchAnimationToolbar) findViewById(R.id.customSearchToolbar);
-        customSearchAnimationToolbar.setTitle("Search animation!");
-        customSearchAnimationToolbar.setSupportActionBar(MainCallappActivity.this);
-        customSearchAnimationToolbar.setOnSearchQueryChangedListener(MainCallappActivity.this);
-        customSearchAnimationToolbar.setSearchHint("Search for...");
-        customSearchAnimationToolbar.setTitleTextColor(Color.WHITE);
+````
+searchAnimationToolbar = (SearchAnimationToolbar) findViewById(R.id.customSearchToolbar);
+searchAnimationToolbar.setSupportActionBar(MainCallappActivity.this);
+searchAnimationToolbar.setTitle("Search animation!");
+searchAnimationToolbar.setOnSearchQueryChangedListener(MainCallappActivity.this);
+searchAnimationToolbar.setSearchHint("Search for...");
+searchAnimationToolbar.setTitleTextColor(Color.WHITE);
 ````
 
 Alternativly, You can take the Toolbar:
