@@ -80,4 +80,4 @@ Developer notes
 * I've implemented everything assuming that your menu xml has only 1 item and it's the magnifying glass one
 * The animation uses API > 21 so if your device is below it's still work but without the animation
 * Found a Bug? please report in our [Issues section](https://github.com/UdiOshi85/libSearchToolbar/issues)
-* License under [Apache 2.0](https://github.com/UdiOshi85/libSearchToolbar/blob/master/LICENSE) (Take the code and do whatever you want)
+* License under Apache 2.0
