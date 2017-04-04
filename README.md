@@ -16,7 +16,7 @@ Create a simple toolbar with circurlar reveal animation when searching!
 
 #### First, Compile library into your code
 
-> compile 'com.not.ready.yet'
+> compile 'com.github.udioshi85:libSearchToolbar:1.0.0-beta1'
 
 
 In your XML file put the following:
