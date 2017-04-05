@@ -2,7 +2,7 @@ Search toolbar with animation
 ===================
 Create a simple toolbar with circurlar reveal animation when searching!
 
-### The animation will work on Lollipop devices, For older devices we'll just ignore the animation but it's still work
+## Api > 21 ? Circular real animation! : change without animation;
 ----------
 
 ### Example
