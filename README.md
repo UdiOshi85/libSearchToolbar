@@ -2,7 +2,7 @@ Search toolbar with animation
 ===================
 Create a simple toolbar with circurlar reveal animation when searching!
 
-## Api > 21 ? Circular real animation! : change without animation;
+## Api > 21 ? Circular reveal animation! : change without animation;
 ----------
 
 ### Example
