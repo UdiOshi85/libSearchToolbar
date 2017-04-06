@@ -15,8 +15,9 @@ Create a simple toolbar with circurlar reveal animation when searching!
 
 
 ### In your application gradle file, add the following
-### compile 'com.github.udioshi85:libSearchToolbar:1.0.0'
-
+````
+compile 'com.github.udioshi85:libSearchToolbar:1.0.0'
+````
 
 In your XML file put the following:
 ````
