@@ -57,8 +57,8 @@ public class SearchAnimationToolbar extends FrameLayout implements TextWatcher {
     private void inflateAndBindViews() {
         View.inflate(getContext(), R.layout.view_search_toolbar, SearchAnimationToolbar.this);
 
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
-        searchToolbar = (Toolbar) findViewById(R.id.searchToolbar);
+        toolbar = (Toolbar) findViewById(R.id.lib_search_animation_toolbar);
+        searchToolbar = (Toolbar) findViewById(R.id.lib_search_animation_search_toolbar);
 
         searchToolbar.inflateMenu(R.menu.menu_search);
         searchToolbar.setNavigationOnClickListener(new View.OnClickListener() {
