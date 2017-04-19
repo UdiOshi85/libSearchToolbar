@@ -23,8 +23,6 @@ import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 
-import org.w3c.dom.Text;
-
 public class SearchAnimationToolbar extends FrameLayout implements TextWatcher {
 
     public interface OnSearchQueryChangedListener {
@@ -86,10 +84,11 @@ public class SearchAnimationToolbar extends FrameLayout implements TextWatcher {
             txtSearch.setHint(searchHint);
         }
 
-        searchBackgroundColor = typedArray.getColor(R.styleable.SearchAnimationToolbar_searchBackroundColor, Color.WHITE);
+        searchBackgroundColor = typedArray.getColor(R.styleable.SearchAnimationToolbar_searchBackgroundColor, Color.WHITE);
         searchToolbar.setBackgroundColor(searchBackgroundColor);
 
     }
+
 
 
     private void inflateAndBindViews() {

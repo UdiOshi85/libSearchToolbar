@@ -1,11 +1,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.oshi.libsearchtoolbar">
 
     <application
         android:allowBackup="true"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme.Light"
         android:supportsRtl="true">
 
     </application>
