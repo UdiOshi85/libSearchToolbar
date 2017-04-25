@@ -16,12 +16,15 @@ import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.util.AttributeSet;
+import android.view.KeyEvent;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewAnimationUtils;
+import android.view.inputmethod.EditorInfo;
 import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 public class SearchAnimationToolbar extends FrameLayout implements TextWatcher {
 
@@ -31,6 +34,8 @@ public class SearchAnimationToolbar extends FrameLayout implements TextWatcher {
         void onSearchQueryChanged(String query);
 
         void onSearchExpanded();
+
+        void onSearchSubmitted(String query);
     }
 
     private String toolbarTitle;
@@ -135,6 +140,17 @@ public class SearchAnimationToolbar extends FrameLayout implements TextWatcher {
         // set hint and the text colors
         txtSearch = ((EditText) searchView.findViewById(android.support.v7.appcompat.R.id.search_src_text));
         txtSearch.addTextChangedListener(SearchAnimationToolbar.this);
+        txtSearch.setOnEditorActionListener(new EditText.OnEditorActionListener() {
+            @Override
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                if (actionId == EditorInfo.IME_ACTION_SEARCH || actionId == EditorInfo.IME_ACTION_DONE) {
+                    notifySearchSubmitted(txtSearch.getText().toString());
+                    return true;
+                }
+
+                return false;
+            }
+        });
 
     }
 
@@ -246,6 +262,12 @@ public class SearchAnimationToolbar extends FrameLayout implements TextWatcher {
     private void notifySearchQueryChanged(String q) {
         if (this.onSearchQueryChangedListener != null) {
             this.onSearchQueryChangedListener.onSearchQueryChanged(q);
+        }
+    }
+
+    private void notifySearchSubmitted(String q) {
+        if (this.onSearchQueryChangedListener != null) {
+            this.onSearchQueryChangedListener.onSearchSubmitted(q);
         }
     }
 
