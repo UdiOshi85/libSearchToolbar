@@ -301,4 +301,13 @@ public class SearchAnimationToolbar extends FrameLayout implements TextWatcher {
             searchToolbar.setVisibility(View.VISIBLE);
         }
     }
+
+    /**
+     * Expands the toolbar (Without animation) and update the search with a given query
+     */
+    public void expandAndSearch(String query) {
+        searchToolbar.setVisibility(View.VISIBLE);
+        searchMenuItem.expandActionView();
+        txtSearch.setText(query);
+    }
 }
