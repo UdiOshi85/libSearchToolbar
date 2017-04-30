@@ -13,7 +13,7 @@ ext {
     siteUrl = 'https://github.com/UdiOshi85/libSearchToolbar'
     gitUrl = 'https://github.com/UdiOshi85/libSearchToolbar.git'
 
-    libraryVersion = '1.2.2'
+    libraryVersion = '1.2.3'
 
     developerId = 'udioshi85'
     developerName = 'Udi oshi'
@@ -33,7 +33,7 @@ android {
         minSdkVersion 14
         targetSdkVersion 25
         versionCode 1
-        versionName "1.0"
+        versionName "1.2.3"
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
