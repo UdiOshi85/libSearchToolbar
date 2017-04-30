@@ -94,7 +94,13 @@ public class SearchAnimationToolbar extends FrameLayout implements TextWatcher {
 
     }
 
+    public void setSearchTextColor(int color) {
+        txtSearch.setTextColor(color);
+    }
 
+    public void setSearchHintColor(int color) {
+        txtSearch.setHintTextColor(color);
+    }
 
     private void inflateAndBindViews() {
         View.inflate(getContext(), R.layout.view_search_toolbar, SearchAnimationToolbar.this);
