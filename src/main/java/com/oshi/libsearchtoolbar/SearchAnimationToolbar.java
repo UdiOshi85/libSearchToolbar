@@ -289,7 +289,8 @@ public class SearchAnimationToolbar extends FrameLayout implements TextWatcher {
     public void afterTextChanged(Editable s) {
 
         if (!currentQuery.equalsIgnoreCase(s.toString())) {
-            notifySearchQueryChanged(s.toString());
+            currentQuery = s.toString();
+            notifySearchQueryChanged(currentQuery);
         }
     }
 
